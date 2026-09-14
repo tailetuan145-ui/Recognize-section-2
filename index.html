@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>SAFE SCHOOL - Recognize Section 2</title>
+
+  <style>
+
+    /* =========================================
+       RESET
+    ========================================= */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+
+      width: 100%;
+
+      overflow-x: hidden;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      background: transparent;
+    }
+
+    img {
+      display: block;
+
+      max-width: 100%;
+    }
+
+
+    /* =========================================
+       SECTION 2
+    ========================================= */
+
+    .forms-section {
+      position: relative;
+
+      width: 100%;
+
+      padding:
+        56px 0 62px;
+
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          180deg,
+          #f8fcfd 0%,
+          #eef8fa 100%
+        );
+    }
+
+
+    /* soft background decoration */
+
+    .forms-section::before {
+      content: "";
+
+      position: absolute;
+
+      width: 220px;
+      height: 220px;
+
+      left: -100px;
+      top: -90px;
+
+      border-radius: 50%;
+
+      background:
+        rgba(15, 163, 163, .05);
+
+      pointer-events: none;
+    }
+
+
+    .forms-section::after {
+      content: "";
+
+      position: absolute;
+
+      width: 220px;
+      height: 220px;
+
+      right: -100px;
+      bottom: -100px;
+
+      border-radius: 50%;
+
+      background:
+        rgba(15, 163, 163, .05);
+
+      pointer-events: none;
+    }
+
+
+    /* =========================================
+       CONTAINER
+    ========================================= */
+
+    .forms-container {
+      position: relative;
+
+      z-index: 2;
+
+      width:
+        min(1420px, 94%);
+
+      margin:
+        0 auto;
+    }
+
+
+    /* =========================================
+       HEADING
+    ========================================= */
+
+    .forms-heading {
+      max-width: 850px;
+
+      margin:
+        0 auto 34px;
+
+      text-align: center;
+    }
+
+
+    .forms-eyebrow {
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 12px;
+
+      margin-bottom: 8px;
+
+      color: #078f90;
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+      letter-spacing: .10em;
+
+      text-transform: uppercase;
+    }
+
+
+    .forms-eyebrow::before,
+    .forms-eyebrow::after {
+      content: "";
+
+      width: 42px;
+      height: 2px;
+
+      border-radius: 999px;
+
+      background: #0fa3a3;
+    }
+
+
+    .forms-heading h2 {
+      margin:
+        0 0 10px;
+
+      color: #071a4c;
+
+      font-size:
+        clamp(30px, 3.4vw, 44px);
+
+      font-weight: 800;
+
+      line-height: 1.15;
+    }
+
+
+    .forms-heading p {
+      max-width: 720px;
+
+      margin:
+        0 auto;
+
+      color: #61788f;
+
+      font-size: 15px;
+
+      line-height: 1.65;
+    }
+
+
+    /* =========================================
+       FIVE CARD GRID
+    ========================================= */
+
+    .forms-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+      gap: 18px;
+
+      align-items: stretch;
+    }
+
+
+    /* =========================================
+       CARD IMAGE
+    ========================================= */
+
+    .form-card {
+      min-width: 0;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      text-decoration: none;
+
+      transition:
+        transform .22s ease,
+        filter .22s ease;
+    }
+
+
+    .form-card:hover {
+      transform:
+        translateY(-5px);
+
+      filter:
+        drop-shadow(
+          0 12px 18px
+          rgba(18, 53, 91, .12)
+        );
+    }
+
+
+    .form-card img {
+      width: 100%;
+
+      height: auto;
+
+      display: block;
+
+      object-fit: contain;
+    }
+
+
+    /* =========================================
+       BOTTOM NOTE
+    ========================================= */
+
+    .forms-note {
+      margin-top: 28px;
+
+      text-align: center;
+
+      color: #078f90;
+
+      font-size: 14px;
+
+      font-weight: 700;
+    }
+
+
+    /* =========================================
+       MEDIUM SCREEN
+       3 + 2 CENTERED
+    ========================================= */
+
+    @media (max-width: 1180px) {
+
+      .forms-grid {
+        grid-template-columns:
+          repeat(6, minmax(0, 1fr));
+
+        gap: 20px;
+      }
+
+
+      .form-card {
+        grid-column:
+          span 2;
+      }
+
+
+      .form-card:nth-child(4) {
+        grid-column:
+          2 / span 2;
+      }
+
+
+      .form-card:nth-child(5) {
+        grid-column:
+          4 / span 2;
+      }
+
+    }
+
+
+    /* =========================================
+       TABLET
+       2 + 2 + 1
+    ========================================= */
+
+    @media (max-width: 800px) {
+
+      .forms-grid {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+
+        gap: 18px;
+      }
+
+
+      .form-card,
+      .form-card:nth-child(4),
+      .form-card:nth-child(5) {
+        grid-column: auto;
+      }
+
+
+      .form-card:nth-child(5) {
+        grid-column:
+          1 / -1;
+
+        width:
+          calc(50% - 9px);
+
+        justify-self:
+          center;
+      }
+
+    }
+
+
+    /* =========================================
+       MOBILE
+    ========================================= */
+
+    @media (max-width: 520px) {
+
+      .forms-section {
+        padding:
+          46px 0 52px;
+      }
+
+
+      .forms-container {
+        width: 92%;
+      }
+
+
+      .forms-heading {
+        margin-bottom: 26px;
+      }
+
+
+      .forms-heading h2 {
+        font-size: 29px;
+      }
+
+
+      .forms-heading p {
+        font-size: 14px;
+      }
+
+
+      .forms-grid {
+        grid-template-columns:
+          1fr;
+
+        gap: 16px;
+      }
+
+
+      .form-card,
+      .form-card:nth-child(4),
+      .form-card:nth-child(5) {
+        grid-column: auto;
+
+        width: 100%;
+
+        max-width: 330px;
+
+        justify-self: center;
+      }
+
+
+      .forms-note {
+        font-size: 13px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <section class="forms-section">
+
+    <div class="forms-container">
+
+
+      <!-- =====================================
+           HEADING
+      ====================================== -->
+
+      <div class="forms-heading">
+
+
+        <div class="forms-eyebrow">
+          What counts as school violence?
+        </div>
+
+
+        <h2>
+          School violence can take many forms.
+        </h2>
+
+
+        <p>
+          It can happen in person or online,
+          intentionally or unintentionally.
+          Understanding the different forms can help us
+          recognize, prevent, and respond to it.
+        </p>
+
+
+      </div>
+
+
+
+      <!-- =====================================
+           FIVE CARDS
+      ====================================== -->
+
+      <div class="forms-grid">
+
+
+        <!-- 1. PHYSICAL -->
+
+        <a
+          href="#"
+          class="form-card"
+        >
+
+          <img
+            src="../../images/card-physical.png"
+            alt="Physical Violence"
+          >
+
+        </a>
+
+
+
+        <!-- 2. PSYCHOLOGICAL -->
+
+        <a
+          href="#"
+          class="form-card"
+        >
+
+          <img
+            src="../../images/card-psychological.png"
+            alt="Psychological Violence"
+          >
+
+        </a>
+
+
+
+        <!-- 3. SEXUAL -->
+
+        <a
+          href="#"
+          class="form-card"
+        >
+
+          <img
+            src="../../images/card-sexual.png"
+            alt="Sexual Violence"
+          >
+
+        </a>
+
+
+
+        <!-- 4. BULLYING -->
+
+        <a
+          href="#"
+          class="form-card"
+        >
+
+          <img
+            src="../../images/card-bullying.png"
+            alt="Bullying"
+          >
+
+        </a>
+
+
+
+        <!-- 5. CYBERBULLYING -->
+
+        <a
+          href="#"
+          class="form-card"
+        >
+
+          <img
+            src="../../images/card-cyberbullying.png"
+            alt="Cyberbullying"
+          >
+
+        </a>
+
+
+      </div>
+
+
+
+      <!-- =====================================
+           NOTE
+      ====================================== -->
+
+      <div class="forms-note">
+
+        Different forms. The same impact.
+        Recognizing them is the first step.
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+</body>
+
+</html>
