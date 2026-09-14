@@ -13,9 +13,9 @@
 
   <style>
 
-    /* =========================================
+    /* =====================================================
        RESET
-    ========================================= */
+    ===================================================== */
 
     * {
       box-sizing: border-box;
@@ -40,14 +40,14 @@
 
     img {
       display: block;
-
       max-width: 100%;
     }
 
 
-    /* =========================================
+    /* =====================================================
        SECTION 2
-    ========================================= */
+       GỌN HƠN - CÂN VỚI SECTION 3
+    ===================================================== */
 
     .forms-section {
       position: relative;
@@ -55,7 +55,7 @@
       width: 100%;
 
       padding:
-        56px 0 62px;
+        44px 0 48px;
 
       overflow: hidden;
 
@@ -68,23 +68,25 @@
     }
 
 
-    /* soft background decoration */
+    /* =====================================================
+       DECORATION
+    ===================================================== */
 
     .forms-section::before {
       content: "";
 
       position: absolute;
 
-      width: 220px;
-      height: 220px;
+      width: 170px;
+      height: 170px;
 
-      left: -100px;
-      top: -90px;
+      left: -85px;
+      top: -75px;
 
       border-radius: 50%;
 
       background:
-        rgba(15, 163, 163, .05);
+        rgba(15, 163, 163, .045);
 
       pointer-events: none;
     }
@@ -95,24 +97,24 @@
 
       position: absolute;
 
-      width: 220px;
-      height: 220px;
+      width: 170px;
+      height: 170px;
 
-      right: -100px;
-      bottom: -100px;
+      right: -85px;
+      bottom: -80px;
 
       border-radius: 50%;
 
       background:
-        rgba(15, 163, 163, .05);
+        rgba(15, 163, 163, .045);
 
       pointer-events: none;
     }
 
 
-    /* =========================================
+    /* =====================================================
        CONTAINER
-    ========================================= */
+    ===================================================== */
 
     .forms-container {
       position: relative;
@@ -120,22 +122,22 @@
       z-index: 2;
 
       width:
-        min(1420px, 94%);
+        min(1260px, 92%);
 
       margin:
         0 auto;
     }
 
 
-    /* =========================================
+    /* =====================================================
        HEADING
-    ========================================= */
+    ===================================================== */
 
     .forms-heading {
-      max-width: 850px;
+      max-width: 760px;
 
       margin:
-        0 auto 34px;
+        0 auto 26px;
 
       text-align: center;
     }
@@ -147,13 +149,13 @@
       align-items: center;
       justify-content: center;
 
-      gap: 12px;
+      gap: 10px;
 
-      margin-bottom: 8px;
+      margin-bottom: 7px;
 
       color: #078f90;
 
-      font-size: 12px;
+      font-size: 11px;
 
       font-weight: 800;
 
@@ -167,7 +169,7 @@
     .forms-eyebrow::after {
       content: "";
 
-      width: 42px;
+      width: 34px;
       height: 2px;
 
       border-radius: 999px;
@@ -178,12 +180,12 @@
 
     .forms-heading h2 {
       margin:
-        0 0 10px;
+        0 0 8px;
 
       color: #071a4c;
 
       font-size:
-        clamp(30px, 3.4vw, 44px);
+        clamp(27px, 3vw, 38px);
 
       font-weight: 800;
 
@@ -192,41 +194,45 @@
 
 
     .forms-heading p {
-      max-width: 720px;
+      max-width: 680px;
 
       margin:
         0 auto;
 
       color: #61788f;
 
-      font-size: 15px;
+      font-size: 13px;
 
-      line-height: 1.65;
+      line-height: 1.55;
     }
 
 
-    /* =========================================
-       FIVE CARD GRID
-    ========================================= */
+    /* =====================================================
+       FIVE CARDS
+    ===================================================== */
 
     .forms-grid {
       display: grid;
 
       grid-template-columns:
-        repeat(5, minmax(0, 1fr));
+        repeat(5, 1fr);
 
-      gap: 18px;
+      gap: 14px;
 
-      align-items: stretch;
+      align-items: center;
+
+      justify-items: center;
     }
 
 
-    /* =========================================
-       CARD IMAGE
-    ========================================= */
+    /* =====================================================
+       CARD
+    ===================================================== */
 
     .form-card {
-      min-width: 0;
+      width: 100%;
+
+      max-width: 218px;
 
       display: flex;
 
@@ -243,18 +249,23 @@
 
     .form-card:hover {
       transform:
-        translateY(-5px);
+        translateY(-4px);
 
       filter:
         drop-shadow(
-          0 12px 18px
-          rgba(18, 53, 91, .12)
+          0 9px 14px
+          rgba(18, 53, 91, .10)
         );
     }
 
 
+    /* QUAN TRỌNG:
+       giới hạn kích thước ảnh card */
+
     .form-card img {
       width: 100%;
+
+      max-width: 218px;
 
       height: auto;
 
@@ -264,41 +275,50 @@
     }
 
 
-    /* =========================================
-       BOTTOM NOTE
-    ========================================= */
+    /* =====================================================
+       NOTE
+    ===================================================== */
 
     .forms-note {
-      margin-top: 28px;
+      margin-top: 20px;
 
       text-align: center;
 
       color: #078f90;
 
-      font-size: 14px;
+      font-size: 12px;
 
       font-weight: 700;
+
+      line-height: 1.5;
     }
 
 
-    /* =========================================
-       MEDIUM SCREEN
-       3 + 2 CENTERED
-    ========================================= */
+    /* =====================================================
+       LAPTOP
+       3 + 2 CENTER
+    ===================================================== */
 
-    @media (max-width: 1180px) {
+    @media (max-width: 1050px) {
+
+      .forms-container {
+        width: min(900px, 92%);
+      }
+
 
       .forms-grid {
         grid-template-columns:
-          repeat(6, minmax(0, 1fr));
+          repeat(6, 1fr);
 
-        gap: 20px;
+        gap: 16px;
       }
 
 
       .form-card {
         grid-column:
           span 2;
+
+        max-width: 220px;
       }
 
 
@@ -313,82 +333,32 @@
           4 / span 2;
       }
 
+
+      .form-card img {
+        max-width: 220px;
+      }
+
     }
 
 
-    /* =========================================
+    /* =====================================================
        TABLET
        2 + 2 + 1
-    ========================================= */
+    ===================================================== */
 
-    @media (max-width: 800px) {
-
-      .forms-grid {
-        grid-template-columns:
-          repeat(2, minmax(0, 1fr));
-
-        gap: 18px;
-      }
-
-
-      .form-card,
-      .form-card:nth-child(4),
-      .form-card:nth-child(5) {
-        grid-column: auto;
-      }
-
-
-      .form-card:nth-child(5) {
-        grid-column:
-          1 / -1;
-
-        width:
-          calc(50% - 9px);
-
-        justify-self:
-          center;
-      }
-
-    }
-
-
-    /* =========================================
-       MOBILE
-    ========================================= */
-
-    @media (max-width: 520px) {
+    @media (max-width: 720px) {
 
       .forms-section {
         padding:
-          46px 0 52px;
-      }
-
-
-      .forms-container {
-        width: 92%;
-      }
-
-
-      .forms-heading {
-        margin-bottom: 26px;
-      }
-
-
-      .forms-heading h2 {
-        font-size: 29px;
-      }
-
-
-      .forms-heading p {
-        font-size: 14px;
+          40px 0 44px;
       }
 
 
       .forms-grid {
         grid-template-columns:
-          1fr;
+          repeat(2, 1fr);
 
-        gap: 16px;
+        gap: 15px;
       }
 
 
@@ -399,14 +369,98 @@
 
         width: 100%;
 
-        max-width: 330px;
+        max-width: 235px;
+      }
+
+
+      .form-card:nth-child(5) {
+        grid-column:
+          1 / -1;
 
         justify-self: center;
       }
 
 
-      .forms-note {
+      .form-card img {
+        max-width: 235px;
+      }
+
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 480px) {
+
+      .forms-section {
+        padding:
+          36px 0 40px;
+      }
+
+
+      .forms-container {
+        width: 90%;
+      }
+
+
+      .forms-heading {
+        margin-bottom: 22px;
+      }
+
+
+      .forms-eyebrow {
+        font-size: 10px;
+      }
+
+
+      .forms-eyebrow::before,
+      .forms-eyebrow::after {
+        width: 24px;
+      }
+
+
+      .forms-heading h2 {
+        font-size: 27px;
+      }
+
+
+      .forms-heading p {
         font-size: 13px;
+      }
+
+
+      .forms-grid {
+        grid-template-columns:
+          1fr;
+
+        gap: 13px;
+      }
+
+
+      .form-card,
+      .form-card:nth-child(4),
+      .form-card:nth-child(5) {
+        grid-column: auto;
+
+        width: 100%;
+
+        max-width: 280px;
+
+        justify-self: center;
+      }
+
+
+      .form-card img {
+        max-width: 280px;
+      }
+
+
+      .forms-note {
+        margin-top: 17px;
+
+        font-size: 12px;
       }
 
     }
@@ -424,12 +478,9 @@
     <div class="forms-container">
 
 
-      <!-- =====================================
-           HEADING
-      ====================================== -->
+      <!-- HEADING -->
 
       <div class="forms-heading">
-
 
         <div class="forms-eyebrow">
           What counts as school violence?
@@ -448,19 +499,16 @@
           recognize, prevent, and respond to it.
         </p>
 
-
       </div>
 
 
 
-      <!-- =====================================
-           FIVE CARDS
-      ====================================== -->
+      <!-- FIVE CARDS -->
 
       <div class="forms-grid">
 
 
-        <!-- 1. PHYSICAL -->
+        <!-- PHYSICAL -->
 
         <a
           href="#"
@@ -476,7 +524,7 @@
 
 
 
-        <!-- 2. PSYCHOLOGICAL -->
+        <!-- PSYCHOLOGICAL -->
 
         <a
           href="#"
@@ -492,7 +540,7 @@
 
 
 
-        <!-- 3. SEXUAL -->
+        <!-- SEXUAL -->
 
         <a
           href="#"
@@ -508,7 +556,7 @@
 
 
 
-        <!-- 4. BULLYING -->
+        <!-- BULLYING -->
 
         <a
           href="#"
@@ -524,7 +572,7 @@
 
 
 
-        <!-- 5. CYBERBULLYING -->
+        <!-- CYBERBULLYING -->
 
         <a
           href="#"
@@ -543,9 +591,7 @@
 
 
 
-      <!-- =====================================
-           NOTE
-      ====================================== -->
+      <!-- NOTE -->
 
       <div class="forms-note">
 
